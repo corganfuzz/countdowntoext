@@ -22,10 +22,12 @@ class Clock extends React.Component {
     }
 
     leading0 (num) {
-        if (num < 10) {
-            return '0' + num;
-        }
-        return num;
+        return num < 10 ? '0' +  num : num;
+        // old way not ES6
+        // if (num < 10) {
+        //     return '0' + num;
+        // }
+        // return num;
     }
 
 getTimeUntil (deadline) {
